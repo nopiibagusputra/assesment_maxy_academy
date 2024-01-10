@@ -21,7 +21,7 @@ class SiswaResources extends JsonResource
             'alamat' => $this->alamat,
             'telp' => $this->telp,
             'kelas' => $this->kelas,
-            'jk' => $this->jk,
+            'jk' => $this->jk === 'L' ? 'Laki - Laki' : 'Perempuan',
             'status' => $this->status,
         ];
     }
