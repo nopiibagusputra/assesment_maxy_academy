@@ -1,4 +1,5 @@
 <?php
+namespace App\Http\Controllers\Api\V1;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::prefix('/v1')->group(function () {
+    Route::get('siswa', [SiswaController::class, 'index'])->name('siswa.list');
+    Route::get('siswa/{id}', [SiswaController::class, 'show'])->name('siswa.show');
+    Route::post('siswa', [SiswaController::class, 'store'])->name('siswa.add');
+    Route::put('siswa/{id}', [SiswaController::class, 'update'])->name('siswa.update');
+    Route::delete('siswa/{id}', [SiswaController::class, 'destroy'])->name('siswa.delete');
+
 });

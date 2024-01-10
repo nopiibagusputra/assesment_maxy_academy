@@ -11,7 +11,7 @@ class UpdateSiswaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class UpdateSiswaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nama_depan' => 'required',
+            'kelas' => 'required',
+            'jk' => 'required'
         ];
     }
 }
