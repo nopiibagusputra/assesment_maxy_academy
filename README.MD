@@ -15,6 +15,10 @@ Repositori Project Test
 2. Frontend | Vue 3 (Node v21.4.0)
 3. Database | MySQL
 
+## Instalasi dan Konfigurasi Database
+
+1. Buat Database dengan nama myapp
+
 ## Instalasi dan Konfigurasi Backend
 
 1. Clone repositori:
