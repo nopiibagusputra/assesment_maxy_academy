@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('alamat')->nullable();
             $table->string('telp', 100)->nullable();
             $table->string('kelas')->nullable();
-            $table->string('jk', 1);
+            $table->string('jk');
             $table->smallInteger('status')->default(0);
             $table->timestamps();
         });
